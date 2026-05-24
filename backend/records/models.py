@@ -19,7 +19,7 @@ class NormalizedRecord(models.Model):
 
     tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE, related_name='records')
     raw_ingestion = models.ForeignKey(RawIngestion, on_delete=models.SET_NULL, null=True, blank=True, related_name='records')
-    source_row_index = models.IntegerField(null=True, blank=True, help_name="Row index in original file")
+    source_row_index = models.IntegerField(null=True, blank=True, help_text="Row index in original file")
     
     date = models.DateField()
     scope = models.CharField(max_length=10, choices=SCOPE_CHOICES)
@@ -32,7 +32,7 @@ class NormalizedRecord(models.Model):
     normalized_value = models.DecimalField(max_digits=18, decimal_places=4)
     normalized_unit = models.CharField(max_length=20)
     
-    co2e_kg = models.DecimalField(max_digits=18, decimal_places=4, help_name="Calculated carbon in kilograms of CO2e")
+    co2e_kg = models.DecimalField(max_digits=18, decimal_places=4, help_text="Calculated carbon in kilograms of CO2e")
     location = models.CharField(max_length=100, blank=True, null=True)
     
     # Audit & Approval states
