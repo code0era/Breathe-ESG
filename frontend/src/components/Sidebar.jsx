@@ -23,7 +23,7 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
           <h2 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-display)', fontWeight: 700, background: 'linear-gradient(135deg, #fff 30%, var(--text-muted) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             Breathe ESG
           </h2>
-          <span style={{ fontSize: '0.7rem', color: var(--primary), fontWeight: 600, letterSpacing: '0.05em' }}>
+          <span style={{ fontSize: '0.7rem', color: 'var(--primary)', fontWeight: 600, letterSpacing: '0.05em' }}>
             ENTERPRISE HUB
           </span>
         </div>
